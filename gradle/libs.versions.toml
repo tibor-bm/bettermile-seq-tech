@@ -1,0 +1,30 @@
+[versions]
+kotlin = "2.1.21"
+hamkrest = "1.8.0.1"
+junit = "5.13.4"
+mockito-core = "5.19.0"
+mockito-kotlin = "6.0.0"
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinter = { id = "org.jmailen.kotlinter", version = "5.2.0" }
+
+[libraries]
+coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.10.2" }
+kotter = { module = "com.varabyte.kotter:kotter", version = "1.2.1" }
+kotlin-logging = { module = "io.github.oshai:kotlin-logging", version = "7.0.13" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version = "2.0.17" }
+log4j2-slf4j = { module = "org.apache.logging.log4j:log4j-slf4j2-impl", version = "2.25.2" }
+log4j2-api = { module = "org.apache.logging.log4j:log4j-api", version = "2.25.2" }
+
+hamkrest = { module = "com.natpryce:hamkrest", version.ref = "hamkrest" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito-core" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
+
+[bundles]
+logging = ["kotlin-logging", "slf4j-api", "log4j2-api", "log4j2-slf4j"]
+mockito = ["mockito-core", "mockito-kotlin"]
